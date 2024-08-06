@@ -15,7 +15,6 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
 
   const author = await request.jwtDecode().then((tokenPayload) => {
     const { id }: any = tokenPayload
-    console.log(tokenPayload)
     return id
   })
 
